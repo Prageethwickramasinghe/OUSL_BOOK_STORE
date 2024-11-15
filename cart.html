@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - OUSLBookStore</title>
+    <style>
+       
+        body {
+            background-color: #13d3c9; 
+            font-family: Arial, sans-serif; 
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            margin: 0;
+            color: rgb(0, 0, 0);
+            font-family: "Times New Roman", Times, serif;
+            font-size: 40px;
+        }
+
+        #campus-logo {
+            max-width: 150px; 
+            margin: auto;
+            display: block;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        #cart-container {
+            background: white;
+            border-radius: 8px; 
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+            padding: 20px;
+        }
+
+        table {
+            width: 100%; 
+            border-collapse: collapse; 
+        }
+
+        th, td {
+            padding: 10px; 
+            text-align: left; 
+            border-bottom: 1px solid #ddd; 
+        }
+
+        th {
+            background-color: #f2f2f2; 
+        }
+
+        input[type="number"] {
+            width: 60px; 
+        }
+
+        .remove-btn {
+            background-color: #ff4d4d; 
+            color: white; 
+            border: none; 
+            padding: 5px 10px; 
+            cursor: pointer;
+            border-radius: 5px; 
+        }
+
+        .remove-btn:hover {
+            background-color: #ff1a1a; 
+        }
+
+        .add-btn {
+            background-color: #ff4d4d; 
+            color: white; 
+            border: none; 
+            padding: 5px 10px; 
+            cursor: pointer; 
+            border-radius: 5px; 
+        }
+
+        .add-btn:hover {
+            background-color: #ff1a1a; 
+        }
+
+
+        #cart-summary {
+            margin-top: 20px; 
+            font-size: 1.2em;
+        }
+
+        #proceed-payment-btn {
+            border: 2px solid;
+            border-radius: 5px;
+            background-color: #e2d9d9;
+            color: rgb(0, 0, 0);
+            padding: 10px 20px; 
+            cursor: pointer; 
+            border-radius: 5px; 
+            margin-top: 20px; 
+        }
+
+        #proceed-payment-btn:hover {
+            background-color: #000000; 
+            color: rgb(255, 255, 255);
+        }
+
+        footer {
+            background-color: #020802;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        footer .social-icons {
+            margin: 10px 0;
+        }
+
+        footer .social-icons img {
+            width: 30px; 
+            margin: 0 10px;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <img src="cropped-OUSL-Site-Logo.png" alt="ousl" width="300" height="80">
+        <h1>Your Cart</h1>
+    </header>
+    <main>
+        <section id="cart-container">
+          
+            <div id="cart-items">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Book Title</th>
+                            <th>Author</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Total</th>
+                            <th>Add</th>
+                            <th>Remove</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cart-list">
+                        
+                        <tr>
+                            <td>Sample Book</td>
+                            <td>Author Name</td>
+                            <td>Rs1000.00</td>
+                            <td><input type="number" value="1" min="1"></td>
+                            <td>Rs1000.00</td>
+                            <td><button class="add-btn">Add</button></td>
+                            <td><button class="remove-btn">Remove</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div id="cart-summary">
+                <p><strong>Total Price: Rs<span id="total-price">1000.00</span></strong></p>
+            </div>
+            <button id="proceed-payment-btn" onclick="location.href='payment.html'">Proceed to Payment</button>
+        </section>
+    </main>
+
+    <footer>
+        <p> Mail:  adcol@ou.ac.lk</p>
+        <p>Hotline: 0701235769</p>
+        <div class="social-icons">
+            <a href="https://facebook.com" target="blank">
+                <img src="Logo_de_Facebook.png" alt="Facebook"> 
+            </a>
+            <a href="https://twitter.com" target="blank">
+                <img src="twitter.png" alt="Twitter"> 
+            </a>
+        </div>
+        <p>&copy; 2024 OUSLBookStore. All rights reserved.</p>
+    </footer>
+
+    <script src="cart.js"></script>
+</body>
+</html>
